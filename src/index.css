@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Roboto', 'sans-serif';
+  font-family: "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+  }  
+  #root {
+    background: var(--primaryBacgkround);
+    color: var(--primaryColor);
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+  }
+  .light__mode{
+    --primaryColor:black !important;
+    --primaryBacgkround:white !important;
+    --loginColor:#1877f2 !important; 
+    --loading:white !important;
+  --topbarBacgkround:#1877f2 !important;
+  --chatFeedBackground:url("./Components/img/LightBackground.jpeg");
+  } 
+  .dark__mode{
+  --primaryColor:white !important;
+  --primaryBacgkround:black !important;
+  --topbarBacgkround:black !important; 
+    --loginColor:#1877f2 !important; 
+    --chatFeedBackground: url("./Components/img/DarkBackgroung.jpeg");
+  }
+  
+
+  
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: var(--primaryBacgkround);
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid var(--primaryBacgkround);
+  border-top-color: var(--primaryColor);
+  border-bottom-color: var(--primaryColor);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* .cursor{
+  width: 20px;
+  height: 20px;
+  border: 1px solid orange;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+  transition-duration:100ms;
+  transition-timing-function: ease-in;
+  background-image: linear-gradient(to right, orange,green, #0593ff, violet);
+}
+.expand{
+  opacity: .5;
+  border: 3px solid violet;
+} */

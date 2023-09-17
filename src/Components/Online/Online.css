@@ -1,0 +1,31 @@
+.rightbarFriendlist{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.rightbarFriend{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.firghtbarProfileImgCon{
+    margin-right: 10px;
+    position: relative;
+}
+.rightbarprofileImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    object-fit:cover;
+}
+.rightbarOnline{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: lawngreen;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    border: 2px solid white;
+}

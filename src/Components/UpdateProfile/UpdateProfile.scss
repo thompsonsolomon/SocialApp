@@ -1,0 +1,100 @@
+.UpdateProfileCon {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .UpdateProfileWrapper {
+    width: 90%;
+    padding: 30px 10px;
+    // background-color: red;
+
+    .BackCon {
+      margin-bottom: 15px;
+    }
+    .InputWrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      .textArea {
+        color: inherit;
+        width: 100%;
+        padding: 20px 10px;
+        height: 30px;
+        font-size: 15px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--loginColor);
+        outline: none;
+        font-weight: 100;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        &::placeholder {
+          font-size: 15px;
+          font-weight: 100;
+          color: var(--primaryColor);
+        }
+      }
+      input {
+        color: inherit;
+        width: 100%;
+        padding: 5px 10px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--loginColor);
+        outline: none;
+
+        ::placeholder {
+          color: inherit;
+        }
+      }
+
+      label {
+        margin: 10px 0px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        font-size: 15px;
+        color: var(--loginColor);
+        font-weight: 500;
+      }
+
+      img {
+        width: 32px;
+      }
+    }
+
+    .buttonCOn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+
+      .SubmitButton {
+        background-color: var(--loginColor);
+        padding: 10px 18px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-size: 15px;
+        margin-top: 10px;
+        outline: none;
+        transition: all ease-in-out 1.5s;
+
+        &:hover {
+          box-shadow: 3px 4px 5px 6px var(--loginColor);
+          background-color: white;
+          color: var(--loginColor);
+        }
+      }
+    }
+  }
+}

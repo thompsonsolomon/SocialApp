@@ -1,0 +1,58 @@
+/* .notification{
+    width: 100%;
+ }
+
+
+
+
+ */
+
+.notificationwrapper {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  object-fit: contain;
+}
+.sidebarnotifica {
+  width: 100%;
+  flex: 3;
+
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  position: fixed;
+  min-width: 50px;
+  position: static;
+
+}
+
+@media (max-width: 400px) {
+  .sidebarnotifica {
+    display: none;
+  }
+}
+
+.sidebarnotifica::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+.notificationCon {
+    width: 100%;
+    flex: 9;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: fixed;
+    min-width: 50px;
+    position: static;
+    padding-top: 20px;
+
+}
+.notholder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+

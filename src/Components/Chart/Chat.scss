@@ -1,0 +1,563 @@
+$backgroung: #1877f2;
+$lightbackground: rgba(24, 119, 242, 0.69);
+$color: #1877f2;
+$transition: ease-in-out 1s;
+@import "../UI/Responsive.scss";
+
+.ChatSidebar {
+  height: 100vh;
+  background-color: var(--primaryBacgkround);
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  @include respond(responsive) {
+    padding-top: 30px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  i {
+    color: var(--primaryColor);
+  }
+  .active {
+    color: var(--loginColor);
+    border: none !important;
+  }
+
+  .userImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    float: inline-end;
+  }
+}
+
+.ChartContainer {
+  background-color: var(--primaryBacgkround);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ResponsiveChartsidebarCon {
+    flex: 3;
+    display: none;
+
+    .ResponsiveButtonCon {
+      height: 40px;
+      position: absolute;
+      width: 30px;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // background: red;
+
+      .ResponsiveButton {
+        height: 40px;
+        width: 25px;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        background: none;
+        color: var(--primaryColor);
+      }
+    }
+
+    .responsiveMenu {
+      display: flex;
+    }
+    @include respond(responsive) {
+      display: block;
+      display: flex;
+      justify-content: flex-start;
+      height: 100vh;
+      flex: 0.1;
+
+      .responsiveMenu {
+        display: none;
+        position: absolute;
+      }
+    }
+  }
+
+  .ChartsidebarCon {
+    flex: 3;
+    display: flex;
+
+    @include respond(responsive) {
+      display: none;
+    }
+  }
+  .chartfeed {
+    flex: 9;
+    height: 100vh;
+
+    .Chats {
+      .chatHead {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        background-color: var(--primaryBacgkround);
+        color: var(--primaryColor);
+        border-bottom: 1px solid var(--primaryColor);
+
+        span {
+          font-size: 15px;
+          font-weight: 600;
+          font-family: "Courier New", Courier, monospace;
+        }
+
+        .chatsInfo {
+          display: flex;
+          width: 100%;
+          padding: 10px;
+          justify-content: space-between;
+
+          .chatinfoimg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            @include respond(responsive) {
+              margin-left: 20px;
+            }
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+              vertical-align: middle;
+            }
+          }
+        }
+        .chatIcons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .Messages {
+        background-image: var(--chatFeedBackground);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: calc(100vh - 100px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+          width: 8px !important;
+          border-radius: 50% !important;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: white !important;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          // background-color: $backgroung !important;
+
+          background-image: linear-gradient(
+            0deg,
+            transparent,
+            rgba(52, 168, 44, 0.61),
+            $backgroung
+          );
+        }
+        .Welcome {
+          background-color: rgba(64, 55, 55, 0.9);
+          height: calc(100vh - 100px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          color: var(--primaryColor);
+          font-size: 17px;
+          font-weight: bold;
+
+          .Welcomeicon {
+            font-size: 25px;
+            border: none;
+          }
+        }
+
+        .ChatMessage {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 15px;
+          padding: 10px;
+
+          .ChatMessageInfo {
+            display: flex;
+            flex-direction: column;
+            color: rgb(186, 212, 210);
+            justify-content: space-between;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            span {
+              width: 70px;
+              font-weight: bold;
+              text-align: left;
+              font-family: "Courier New", Courier, monospace;
+              padding-top: 20px;
+            }
+
+            // Micheal Mata
+          }
+          .ChatMessageContent {
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+              background-color: rgba(144, 135, 135, 0.63);
+              color: black;
+              padding: 10px 20px;
+              max-width: max-content;
+              border-radius: 0px 15px 15px 15px;
+            }
+            img {
+              width: 50%;
+              border-radius: 10px;
+              object-fit: contain;
+            }
+          }
+          &.owner {
+            flex-direction: row-reverse;
+
+            .ChatMessageContent {
+              align-items: flex-end;
+              p {
+                background-color: $backgroung;
+                color: white;
+                border-radius: 15px 0px 15px 15px;
+              }
+            }
+          }
+        }
+      }
+
+      .ChatInput {
+        height: 50px;
+        background-color: transparent;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .OverFlowImageName {
+          position: absolute;
+          background-color: var(--primaryBacgkround);
+          color: var(--primaryColor);
+          width: fit-content;
+          max-width: 20%;
+          bottom: 50px;
+          border-radius: 5px;
+          height: fit-content;
+          text-align: left;
+
+          @include respond(tab-land) {
+            bottom: 10px;
+            max-width: 50%;
+          }
+        }
+
+        .SendInputRight {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 7;
+
+          textarea {
+            border: none;
+            outline: none;
+            background: transparent;
+            width: 100%;
+            font-size: 18px;
+            font-weight: 500;
+            border-bottom: 1px solid var(--topbarBacgkround);
+            color: var(--primaryColor);
+            padding: 0px 7px;
+            height: 35px;
+            border-radius: 5px;
+
+            &::placeholder {
+              color: grey;
+            }
+          }
+        }
+
+        .send {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          width: 100%;
+          flex: 2;
+
+          @include respond(tab-land) {
+            flex: 5;
+          }
+
+          .Sender {
+            width: 100%;
+          }
+          img {
+            height: 20px;
+            width: 100%;
+            cursor: pointer;
+          }
+          label {
+            width: 50%;
+            @include respond(tab-land) {
+              width: 100%;
+              padding: 3px;
+            }
+          }
+          button {
+            border: none;
+            width: 100%;
+            outline: none;
+            padding: 8px 10px;
+            color: var(--primaryBacgkround);
+            border-radius: 50px;
+            background-color: var(--loginColor);
+          }
+        }
+      }
+    }
+  }
+}
+
+.ChartfeedSideBAr {
+  width: 100%;
+  padding-top: 10px;
+  background-color: var(--primaryBacgkround);
+  border-right: 2px solid $backgroung;
+  border-left: 2px solid $backgroung;
+  @include respond(tab-land) {
+    border-left: none;
+  }
+
+  .ChartNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    h2 {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .userContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      img {
+        background-color: $backgroung;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid $backgroung;
+      }
+    }
+  }
+
+  .ChatSearch {
+    .searchForm {
+      input {
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+        border-bottom: 1px solid $backgroung;
+        padding: 10px;
+        font-weight: 600;
+        color: $backgroung;
+
+        &::placeholder {
+          color: $backgroung;
+          font-weight: bold;
+        }
+      }
+    }
+    .userChat {
+      display: flex;
+      align-items: center;
+      background: var(--primaryColor);
+      gap: 10px;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        background: $backgroung;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 6px 0 6px 6px;
+        border: 1.5px solid $backgroung;
+      }
+
+      .userChatInfo {
+        color: var(--primaryBacgkround);
+        font-size: 500;
+        font-family: "Courier New", Courier, monospace;
+      }
+    }
+  }
+
+  .ChatsOPtion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: sticky;
+    overflow-y: scroll;
+    height: 70vh;
+
+    .userChatFriends {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      gap: 10px;
+      cursor: pointer;
+      margin-top: 8px;
+      width: 100%;
+      transition: $transition;
+
+      @include respond(tab-land) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &:hover {
+        background: $backgroung;
+      }
+      &:hover .userChatInfo {
+        color: var(--primaryColor);
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1.5px solid $backgroung;
+      }
+
+      .userChatInfo {
+        color: var(--primaryColor);
+        font-size: 15px;
+        font-weight: bold;
+        transition: $transition;
+        span {
+          width: 100%;
+          text-align: left;
+        }
+
+        p {
+          font-size: 8px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+// animatin
+
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: $backgroung;
+  color: $color;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: $lightbackground;
+  color: $backgroung;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: rgba(24, 119, 242, 0.3);
+  }
+  50%,
+  100% {
+    background-color: $backgroung;
+  }
+}

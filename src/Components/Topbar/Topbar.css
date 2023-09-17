@@ -1,0 +1,232 @@
+.topbarCon {
+  height: 50px;
+  background-color: var(--topbarBacgkround) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  -webkit-box-shadow: 0px 0px 16px -8px var(--primaryColor);
+  box-shadow: 0px 0px 16px -8px var(--primaryColor);
+}
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bolder;
+  cursor: pointer;
+  background: transparent;
+  margin-left: 5px;
+}
+.responsiveSearch {
+  transition: cubic-bezier(0.18, 0.93, 0.54, 1.26) 1.5s !important;
+}
+.top {
+  width: 95%;
+  height: 50px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+.topbarLeft {
+  flex: 3;
+  background: transparent;
+}
+.searchbar {
+  width: 100%;
+  height: 38px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 1px 10px;
+}
+.searchIcon {
+  font-size: 20px !important;
+  padding: 0px 5px;
+  background: transparent;
+  /* color: var(--primaryColor); */
+}
+.searchIcon i {
+  color: black;
+}
+.searchInput {
+  border: none;
+  width: 70% !important;
+  outline: none;
+  display: block;
+  width: 100%;
+  background: transparent;
+}
+
+@media (max-width: 500px) {
+  .searchbar {
+    display: none !important;
+  }
+}
+.topbarRight {
+  flex: 4;
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.topbarCenter {
+  flex: 5;
+}
+.topbarImg {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.toplinks {
+  display: flex;
+}
+.toplink {
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+}
+.topbarIconBadge {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -9px;
+}
+.topbarIcon {
+  display: flex;
+}
+.topbarIconItem {
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.responsiveTopbarWrite {
+  display: none;
+  position: sticky;
+  top: 0;
+  /* z-index: 999; */
+}
+.ResponsivetopbarCon {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: none;
+}
+
+.respon {
+  padding: 8px 10px;
+  font-size: 10px;
+  color: white;
+  border-radius: 50%;
+  background-color: rgba(185, 197, 185, 0.28);
+  margin: 8px;
+  cursor: pointer;
+}
+
+.Topbarlist {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 10px 5px 10px;
+}
+.TopbarlistItem i {
+  color: white;
+  font-size: 18px;
+}
+a.TopbarA.active {
+  border-bottom: 1px solid white !important;
+}
+
+@media (max-width: 400px) {
+  .topbarRight {
+    display: none;
+  }
+
+  .responsiveTopbarWrite {
+    display: flex;
+  }
+  .topbarCon {
+    display: none;
+  }
+  .responsiveSearch {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--topbarBacgkround);
+    width: 95%;
+    position: absolute;
+    z-index: 999;
+    height: 50px;
+    transition: cubic-bezier(0.18, 0.93, 0.54, 1.26) 1.5s !important;
+  }
+  .responsiveSearch input {
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(185, 197, 185, 0.28);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    color: white;
+  }
+  .responsiveSearch input::placeholder {
+    color: white;
+  }
+  .responsiveSearchIcon {
+    padding: 8px 10px;
+    font-size: 10px;
+    color: white;
+    border-radius: 50%;
+    background-color: rgba(185, 197, 185, 0.28);
+    margin: 3px;
+    cursor: pointer;
+  }
+  .searchInput {
+    display: none;
+  }
+
+  .ResponsivetopbarCon {
+    display: block;
+    background-color: var(--topbarBacgkround);
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .responsiveTophead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid white;
+  }
+}
+
+.SettingContainer {
+  display: none;
+}
+@media (max-width: 600px) {
+  .SettingContainer {
+    display: block;
+  }
+}

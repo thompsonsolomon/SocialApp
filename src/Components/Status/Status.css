@@ -1,0 +1,65 @@
+.sidebarStatusCon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.SidebarStatusImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sidebarStatusInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+
+.StatusName {
+  font-size: 16px;
+}
+
+@media (max-width: 540px) {
+  .sidebarlistText {
+    display: none !important;
+  }
+  .sidebarButton {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .StatusName {
+    font-size: 13px !important;
+  }
+  .statusTime {
+    font-size: 11px !important;
+  }
+  .sidebarStatusInfo {
+    margin-left: 8px !important;
+  }
+}
+@media (max-width: 740px) {
+  .sidebarStatusInfo {
+    display: none !important;
+  }
+}
+
+@media (max-width: 490px) {
+  .sidebarFriendList {
+    display: none !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .sidebarlistText {
+    display: none !important;
+  }
+
+  .sidebarFriendList h3 {
+    font-size: 13px;
+    padding-bottom: 20px;
+  }
+}

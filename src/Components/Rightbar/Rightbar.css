@@ -1,0 +1,122 @@
+.Rightbar {
+  flex: 3.5;
+  overflow-y: scroll;
+  position: sticky;
+  top: 50px;
+  height: calc(100vh - 50px);
+  min-width:90px !important;
+}
+
+.rightbaractiveFriends{
+  overflow-y: scroll;
+}
+.rightbaractiveFriends::-webkit-scrollbar{
+  display: none;
+}
+
+
+@media (max-width: 600px) {
+    .Rightbar{
+          display: none;
+      }
+    }
+
+@media (max-width: 768px) {
+  /* .Rightbar{
+        display: none;
+    } */
+
+  .birthdayContainer {
+    display: none !important;
+  }
+  img.RightbarAdd {
+    margin: 10px 0px !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .birthdayimg {
+    display: none;
+  }
+}
+@media (max-width: 740px) {
+  img.RightbarAdd {
+    display: none;
+  }
+  h4.rightbartitle {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .rightbarUserName {
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 678px) {
+  .rightbarUserName {
+    display: none;
+  }
+  ul.rightbarFriendlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-end;
+  }
+}
+
+.Rightbar::-webkit-scrollbar {
+  display: none;
+}
+.rightWraper {
+  padding: 20px;
+}
+.birthdayimg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.birthdayText {
+  font-weight: 300;
+  font-size: 15px;
+}
+.birthdayContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.RightbarAdd {
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+.rightbartitle {
+  margin-bottom: 20px;
+}
+
+.rightbarFriendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.RightbarTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.rightbarInfo {
+  margin-bottom: 30px;
+}
+.rightbarInfoItem {
+  margin-bottom: 10px;
+}
+.rightbarInfoValue {
+  font-weight: 300;
+}
+.rightbarInfoKey {
+  font-weight: 500;
+  margin-right: 15px;
+  color: #555;
+}

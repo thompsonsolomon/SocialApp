@@ -1,0 +1,61 @@
+.rightbarFollowings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.rightbarFollowing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 3px 5px 3px ;
+  cursor: pointer;
+}
+
+.followingImg {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+
+
+
+.ResponsiveProfileUsers{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+  gap: 20px;
+}
+.ResponsiveProfileUserCon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+.ResponsiverightbarFollowings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.ResponsiverightbarFollowing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 3px 5px 3px ;
+  cursor: pointer;
+}
+
+.ResponsivefollowingImg {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+
+

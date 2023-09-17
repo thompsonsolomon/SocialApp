@@ -1,0 +1,49 @@
+.Status {
+  flex: 3;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  position: sticky;
+  top: 50px;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .Status {
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    gap: 30px;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+  }
+}
+.statue {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .statue {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.Statuses {
+  flex: 9;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 179, 179);
+}
+
+.stateprofilePicture {
+  width: 100%;
+  height: calc(100vh - 50px);
+  object-fit: contain;
+}

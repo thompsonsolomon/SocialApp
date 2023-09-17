@@ -1,0 +1,12 @@
+.TimelineContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
+.timelineCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,201 @@
+.Sidebar {
+  flex: 2.5;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  position: sticky;
+  top: 50px;
+  min-width: 70px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 179, 179);
+}
+
+.sidebarWrapper {
+  padding: 20px;
+}
+.sidebarlist {
+  padding: 0;
+  margin: 0;
+}
+
+
+.initial {
+  color: #1877f2;
+  font-weight: bolder;
+  border-bottom: 1.5px solid #1877f2;
+}
+.active {
+  color: #1877f2;
+  font-weight: bolder;
+  border-bottom: 1.5px solid #1877f2;
+}
+.sidebarlistItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.sidebarIcon i {
+  margin-right: 15px;
+  font-weight: bolder;
+}
+.sidebarButton {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 30px 3px;
+}
+.sidebaHr {
+  margin: 10px 0;
+}
+.sidebarFriendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sidebarCourseImg {
+  width: 25px;
+}
+.sidebarlistText {
+  font-weight: bold;
+}
+
+.sidebarHambugget,
+.sidebarhambuggerText {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .sidebarlistText {
+    display: none;
+  }
+  .sidebarButton {
+    display: none;
+  }
+  .sidebarHambugget {
+    display: block;
+    font-size: 30px;
+    font-weight: bolder !important;
+    color: #1877f2;
+    cursor: pointer;
+  }
+  .sidebarhambuggerText {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+
+    display: none;
+  }
+  .responsiveSidebarButton {
+    height: 60px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+  }
+  .sidebarulcon {
+    height:fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebarlistText {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .sidebarButton {
+    padding: 5px 10px;
+    font-weight: 400;
+    font-size: 12px;
+    width: 85px;
+    margin: 30px 3px;
+  }
+
+  .sidebarIcon i {
+    margin:8px;
+  }
+
+  .sidebarFriendList h3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  .sidebarulcon {
+    height: fit-content;
+  }
+}
+@media (max-width: 830px) {
+  .sidebarlistText {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .sidebarButton {
+    padding: 5px 10px;
+    font-weight: 400;
+    font-size: 12px;
+    width: 85px;
+    margin: 30px 0px;
+  }
+
+  .sidebarIcon i {
+    margin:8px;
+  }
+
+  .sidebarFriendList h3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  .sidebarulcon {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 800px) {
+  .sidebarWrapper {
+    padding:10px ;
+  }
+  .Sidebar {
+    flex: 3;
+  }
+  .sidebarulcon {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebarlistText {
+    display: block !important;
+  }
+
+  .sidebarButton {
+    display: block !important;
+  }
+  .sidebarHambugget {
+    display: none !important;
+  }
+  .sidebarulcon {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 470px) {
+  .Sidebar {
+    display: none;
+  }
+  .sidebarulcon {
+    height: fit-content;
+  }
+}

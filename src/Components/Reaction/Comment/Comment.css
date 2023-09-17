@@ -1,0 +1,91 @@
+.Comments {
+  visibility: visible;
+  padding: 10px;
+}
+.commenterName{
+  text-transform: capitalize;
+  padding: 0px 5px;
+
+}
+
+.commentContainer {
+  max-height: 100px;
+  overflow-y: scroll;
+  margin: 5px 15px;
+  padding: 5px 15px;
+  font-size: 15px;
+  border-radius: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: rgba(144, 135, 135, 0.63);
+  max-width: max-content;
+}
+
+.commentContainer p{
+  background-color: transparent;
+}
+
+.commentContainer::-webkit-scrollbar {
+  display: none;
+}
+.commenterInfo {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  background: transparent;
+}
+
+.allComment small{
+    color: rgba(24, 119, 242, 0.69);
+    text-decoration: underline;
+    font-weight: bold;
+    background: transparent;
+}
+
+.allComment {
+  max-height: 250px;
+  width: 100%;
+  overflow-y: scroll;
+}
+.commentInput {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.CommentForm {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CommentForm button {
+  height: 35px;
+  background-color: rgba(24, 119, 242, 0.69);
+  color: inherit;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+}
+.ComenttextArea {
+  width: 100% !important;
+  height: 35px !important;
+  max-height: 35px !important;
+  background-color: transparent !important;
+  color: inherit !important;
+  outline: none !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 5px 10px !important;
+  border-bottom: 1px solid blue !important;
+}
+
+.commenterImg {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}

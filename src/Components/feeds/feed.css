@@ -1,0 +1,59 @@
+.feed{
+    flex: 5;
+    margin-top: 50px;
+}
+
+select::-ms-expand{
+    display: none;
+  }
+  .select{
+    position: relative;
+    display: flex;
+    height: 2em;
+    width: 10em;
+    line-height: 3;
+    /* background-color: blue; */
+    overflow: hidden;
+    border-radius: .25em;
+  }
+  .select::after{
+    content:"\25BC";
+    color: #666;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background:transparent;
+    cursor: pointer;
+    pointer-events: none;
+    transition:2.5s all ease;
+  }
+  
+@media (max-width:800px) {
+    .feed{
+        flex: 4;
+    }
+}
+
+@media (max-width:400px) {
+  .feed{
+    margin-top: 0px;
+}
+}
+.NoPostFound{
+  width: 100%;
+  display: Flex;
+  justify-content: Center;
+  align-items:center;
+  height:370px;
+  -webkit-box-shadow: 0px 0px 16px -8px var(--primaryColor);
+  box-shadow: 0px 0px 16px -8px var(--primaryColor);
+  border-radius: 5px;
+  background: linear-gradient(340deg, transparent, rgba(500, 60, 4, 0.31), rgba(500, 300, 4, 0.9));
+  background-color:#1877f2 ;
+  color: white !important;
+  font-weight:400;
+  font-family:inherit;
+  font-size:20px;
+  font-style: oblique;
+}

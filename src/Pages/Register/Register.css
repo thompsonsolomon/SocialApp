@@ -1,0 +1,61 @@
+.registerBttn {
+  padding: 16px 10px;
+  width: 100%;
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #42b73a;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+img {
+  width: 32px;
+}
+
+ input label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--loginColor);
+  font-weight: 500;
+}
+
+.stage {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* bem  */
+/* nextjs  */
+/* story book js */
+/* scss  */
+/* Apple.com  */
+
+.error {
+  color: #1877f2;
+}
+.RegisterLoading {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--primaryBacgkround);
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
